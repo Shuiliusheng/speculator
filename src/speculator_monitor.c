@@ -73,6 +73,7 @@ start_process(char *filename, int core, sem_t *sem, char** env) {
     struct sched_param param;
     char *arr[] = {filename, NULL};
 
+	//bonding cpu to exe
     CPU_ZERO(&set);
     CPU_SET(core, &set);
     sched_setaffinity(getpid(), sizeof(cpu_set_t), &set);
@@ -96,6 +97,9 @@ start_process(char *filename, int core, sem_t *sem, char** env) {
     sem_post(sem);
 
     /* HERE TRY TO START  OTHER PROCESS */
+	//execve(const char *filename, char *const argv[ ], char *const envp[ ]);
+	//exec系列的系统调用是把当前程序替换成要执行的程序
+	//而fork用来产生一个和当前进程一样的进程（虽然通常执行不同的代码流）
     execve(filename, arr, env);
 }
 
@@ -196,6 +200,9 @@ start_monitor_inline(int victim_pid,
     sem_post(sem_victim);
 
     if (sflag) {
+		//如果在调用waitpid()函数时，当指定等待的子进程已经停止运行或结束了
+		//则waitpid()会立即返回
+		//但是如果子进程还没有停止运行或结束，则调用waitpid()函数的父进程则会被阻塞，暂停运行
         waitpid(victim_pid, &status, 0);
     }
 
@@ -268,39 +275,39 @@ main(int argc, char **argv) {
     while ((opt = getopt_long(argc, argv, "hv:a:c:o:qr:id:s",
                 long_options, &option_index)) != -1) {
         switch (opt) {
-            case 'h':
+            case 'h':	//help
                 hflag = 1;
                 break;
-            case 'v':
+            case 'v':	//victim
                 vflag = 1;
                 victim_filename = optarg;
                 break;
-            case 'a':
+            case 'a':	//attack
                 aflag = 1;
                 attacker_filename = optarg;
                 break;
-            case 'c':
+            case 'c':	//config
                 cflag = 1;
                 config_filename = optarg;
                 break;
-            case 'r':
+            case 'r':	//repeat
                 rflag = 1;
                 repeat = atoi(optarg);
                 break;
-            case 'o':
+            case 'o':	//output
                 oflag = 1;
                 output_filename = optarg;
                 break;
-            case 'q':
+            case 'q':	//quiet
                 qflag = 1;
                 break;
-            case 'i':
+            case 'i':	//--invert/-i 	inverts the order of the threads start [default:attacker thread starts first]
                 iflag = 1;
                 break;
-            case 's':
+            case 's':	//--serial/-s 	serialize the execution of attacker and victim
                 sflag = 1;
                 break;
-            case 'd':
+            case 'd':	//--delay/-d 	specifies the delay in (usec) elapsed between the two threads start in attack/victim mode [default: off]
                 if (atoi(optarg) > 0) {
                     dflag = 1;
                     delay = atoi(optarg);
@@ -310,7 +317,7 @@ main(int argc, char **argv) {
                     usage_and_quit(argv);
                 }
                 break;
-            case 0: // venv
+            case 0: // venv : specifies the environment variable to pass to the victim (if any)
                 aenvflag = 1;
                 victim_preload[0] = optarg;
                 index = 1;
@@ -386,19 +393,23 @@ main(int argc, char **argv) {
     else {
         debug_print("Running in snippet mode\n");
     }
-
+	
+	//mmap 匿名映射,创建一块内存供父子进程通信
     sem_victim = mmap(NULL, sizeof(sem_t), PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0);
     sem_attacker = mmap(NULL, sizeof(sem_t), PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0);
-    sem_init(sem_victim, 1, 1);
+    //init sem_*  = 1
+	//the second parameters pshared > 0 时指定了 sem 处于共享内存区域，所以可以在进程间共享该变量
+	sem_init(sem_victim, 1, 1);
     sem_init(sem_attacker, 1, 1);
 
-    parse_config(config_filename);
+    //Function to parse config file 
+	parse_config(config_filename);
 
     recursive_mkdir(output_filename);
 
     init_result_file(output_filename, 0);
 
-    if (aflag) {
+    if (aflag) {//--attacker
         output_filename_attacker = (char *) malloc(sizeof(char) * FILENAME_LENGTH);
         snprintf (output_filename_attacker, FILENAME_LENGTH+1, "%s.attacker", output_filename);
         init_result_file(output_filename_attacker, 1);
@@ -489,10 +500,11 @@ main(int argc, char **argv) {
 
         if (victim_pid < 0)
             exit(EXIT_FAILURE);
-
+		//pid==0, represent it is child process
+		//start_process will use execve to tranform itself to victim process
         if (victim_pid == 0)
             start_process(victim_filename, VICTIM_CORE, sem_victim,  victim_preload);
-
+		//only the parent process will execute this, child process already becomes victim
         start_monitor_inline(victim_pid, attacker_pid, output_filename,
                     output_filename_attacker, msr_fd_victim,
                     msr_fd_attacker);

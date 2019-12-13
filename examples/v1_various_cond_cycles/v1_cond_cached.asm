@@ -43,14 +43,14 @@ perf_test_entry:
     sub rsp, len
 
     check_pinning VICTIM_PROCESS
-    msr_open
-    msr_seek
+    msr_open	; open the dev file in fd to write
+    msr_seek	; nothing to do
 .data:
     mov eax, 0
     cpuid
     lfence
-    reset_counter
-    start_counter
+    reset_counter	;	reset counter value
+    start_counter	;	nothing to do
     cmp DWORD[warmup_cnt], 12
     je .else
 

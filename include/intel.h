@@ -23,7 +23,7 @@ void
 write_to_IA32_PERF_GLOBAL_CTRL(int fd,
                                uint64_t val) {
     int rv = 0;
-
+	//ssize_t pwrite(intfd, const void *buf, size_tcount, off_toffset)；
     rv = pwrite(fd, &val, sizeof(val), 0x38F);
 
     if (rv != sizeof(val)) {
