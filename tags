@@ -1,0 +1,502 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AMD_H	include/amd.h	16;"	d
+DEFAULT_CONF_NAME	include/speculator.h	42;"	d
+DEFAULT_OUTPUT_NAME	include/speculator.h	43;"	d
+DEFAULT_REPEAT	include/speculator.h	40;"	d
+FATHER_CORE	include/speculator.h	65;"	d
+FILENAME_LENGTH	include/speculator.h	41;"	d
+FIXED_COUNTERS	include/intel.h	18;"	d
+INTEL_H	include/intel.h	16;"	d
+MSR_FORMAT	include/speculator.h	64;"	d
+N_COUNTERS	include/speculator.h	39;"	d
+PERF_CNT_MASK	include/amd.h	32;"	d
+PERF_E	include/amd.h	27;"	d
+PERF_EN	include/amd.h	30;"	d
+PERF_EVENT_SELECT	include/amd.h	23;"	d
+PERF_INT	include/amd.h	29;"	d
+PERF_INV	include/amd.h	31;"	d
+PERF_OS	include/amd.h	26;"	d
+PERF_PC	include/amd.h	28;"	d
+PERF_UNIT_MASK	include/amd.h	24;"	d
+PERF_USR	include/amd.h	25;"	d
+PerfCtr0	include/amd.h	20;"	d
+PerfEvtSel0	include/amd.h	19;"	d
+SPECULATOR_H	include/speculator.h	16;"	d
+STR	include/speculator.h	45;"	d
+TO_STR	include/speculator.h	44;"	d
+UOPS_EXECUTED	scripts/post-processing.py	/^UOPS_EXECUTED = ""$/;"	v
+USAGE_FORMAT	include/speculator.h	46;"	d
+__USE_GNU	src/speculator_monitor.c	20;"	d	file:
+addr	examples/rsb/rsb_fill_deep_stack.asm	/^    addr: dq 0$/;"	d
+addr2	examples/rsb/rsb_fill_deep_stack.asm	/^    addr2: dq 0$/;"	d
+address	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    address: dq 0$/;"	d
+address	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    address: dq 0$/;"	d
+address2	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    address2: dq 0$/;"	d
+address2	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    address2: dq 0$/;"	d
+aenvflag	include/speculator.h	/^static int aenvflag = 0;  \/\/ FLAG aenv option$/;"	v
+aflag	include/speculator.h	/^static int aflag = 0;     \/\/ FLAG used to detect victim\/attacker mode$/;"	v
+array	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    array: times 128 db 0$/;"	l
+array	examples/mpx/mpx.asm	/^    array: times 40 db 0$/;"	l
+array	examples/nx/nx.asm	/^    array: times 64 db 0$/;"	l
+array	examples/rsb/rsb_fill_deep_stack.asm	/^    array: resb 2048$/;"	l
+array	examples/speculation_stopper/speculation_stopper.asm	/^    array: resb 128$/;"	l
+array	examples/syscall_speculation/syscall_speculation.asm	/^    array: times 128 db 0$/;"	l
+array	examples/v4_cycles/v4_cycles.asm	/^    array: times 64 db 0$/;"	l
+array	templates/x86/template.asm	/^    array: resb 128$/;"	l
+array	templates/x86/template_branch.asm	/^    array: resb 128$/;"	l
+array	tests/mytest.asm	/^    array: resb 128$/;"	l
+attacker_data	include/speculator.h	/^attacker_data = {{NULL}, {NULL}, {NULL}, {NULL},$/;"	v	typeref:struct:speculator_monitor_data
+attacker_preload	include/speculator.h	/^static char *attacker_preload[100] = {NULL};$/;"	v
+basename	scripts/cr_inc_snip.py	/^basename = ""$/;"	v
+cflag	include/speculator.h	/^static int cflag = 0;     \/\/ FLAG config file option$/;"	v
+config	include/speculator.h	/^    long long config[N_COUNTERS];$/;"	m	struct:speculator_monitor_data
+config_str	include/speculator.h	/^    char* config_str[N_COUNTERS];$/;"	m	struct:speculator_monitor_data
+count	include/speculator.h	/^    long long count[N_COUNTERS];$/;"	m	struct:speculator_monitor_data
+count_fixed	include/speculator.h	/^    long long count_fixed[FIXED_COUNTERS];$/;"	m	struct:speculator_monitor_data
+counter	examples/rsb/rsb_fill_deep_stack.asm	/^    counter: dq 0$/;"	d
+cpuid	include/speculator.h	/^void cpuid(uint32_t idx, cpuinfo *info) {$/;"	f
+cpuinfo	include/speculator.h	/^typedef struct cpuinfo {$/;"	s
+cpuinfo	include/speculator.h	/^} cpuinfo;$/;"	t	typeref:struct:cpuinfo
+debug_print	include/speculator.h	68;"	d
+debug_print	include/speculator.h	70;"	d
+decode_events	include/speculator.h	/^decode_events() {$/;"	f
+delay	include/speculator.h	/^static int delay = 0;$/;"	v
+desc	include/speculator.h	/^    char* desc[N_COUNTERS];$/;"	m	struct:speculator_monitor_data
+dev_file	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/mpx/mpx.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/nx/nx.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/rsb/rsb_fill_deep_stack.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0 ; rest of the data$/;"	d
+dev_file	examples/speculation_stopper/speculation_stopper.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/syscall_speculation/syscall_speculation.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	examples/v4_cycles/v4_cycles.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	templates/x86/template.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	templates/x86/template_branch.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dev_file	tests/mytest.asm	/^    dev_file: db '\/dev\/cpu\/',VICTIM_PROCESS_STR,'\/msr',0$/;"	d
+dflag	include/speculator.h	/^static int dflag = 0;     \/\/ FLAG delay flag$/;"	v
+divisor	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    divisor: dw 2$/;"	d
+divisor	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    divisor: dw 2$/;"	d
+divisor	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    divisor: dw 2$/;"	d
+divisor	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    divisor: dw 2$/;"	d
+dummy	examples/rsb/rsb_fill_deep_stack.asm	/^dummy:$/;"	l
+dump_results	src/speculator_monitor.c	/^void dump_results(char *output_filename, int msr_fd, int is_attacker) {$/;"	f
+eax	include/speculator.h	/^    uint32_t eax;$/;"	m	struct:cpuinfo
+ebx	include/speculator.h	/^    uint32_t ebx;$/;"	m	struct:cpuinfo
+ecx	include/speculator.h	/^    uint32_t ecx;$/;"	m	struct:cpuinfo
+edx	include/speculator.h	/^    uint32_t edx;$/;"	m	struct:cpuinfo
+extract_basename	scripts/cr_inc_snip.py	/^def extract_basename(json_file):$/;"	f
+fd	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    fd: dq 0$/;"	d
+fd	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    fd: dq 0$/;"	d
+fd	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    fd: dq 0$/;"	d
+fd	examples/mpx/mpx.asm	/^    fd: dq 0$/;"	d
+fd	examples/nx/nx.asm	/^    fd: dq 0$/;"	d
+fd	examples/rsb/rsb_fill_deep_stack.asm	/^    fd: dq 0$/;"	d
+fd	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    fd: dq 0$/;"	d
+fd	examples/speculation_stopper/speculation_stopper.asm	/^    fd: dq 0$/;"	d
+fd	examples/syscall_speculation/syscall_speculation.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    fd: dq 0$/;"	d
+fd	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    fd: dq 0$/;"	d
+fd	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    fd: dq 0$/;"	d
+fd	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    fd: dq 0$/;"	d
+fd	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    fd: dq 0$/;"	d
+fd	examples/v4_cycles/v4_cycles.asm	/^    fd: dq 0$/;"	d
+fd	templates/x86/template.asm	/^    fd: dq 0$/;"	d
+fd	templates/x86/template_branch.asm	/^    fd: dq 0$/;"	d
+fd	tests/mytest.asm	/^    fd: dq 0$/;"	d
+fill	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    fill: times 128 db 0$/;"	l
+fill	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    fill: times 63 db 0$/;"	l
+fill	examples/v4_cycles/v4_cycles.asm	/^    fill: times 63 db 0$/;"	l
+fill1	examples/nx/nx.asm	/^    fill1: times 62 db 0$/;"	l
+fill2	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    fill2: times 128 db 0$/;"	l
+fill2	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    fill2: times 60 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    fill2: times 60 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    fill2: times 62 db 0$/;"	l
+fill2	examples/v4_cycles/v4_cycles.asm	/^    fill2: times 60 db 0$/;"	l
+fill3	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    fill3: times 63 db 0$/;"	l
+fill3	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    fill3: times 63 db 0$/;"	l
+fill3	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    fill3: times 63 db 0$/;"	l
+fill3	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    fill3: times 62 db 0$/;"	l
+fill3	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    fill3: times 62 db 0$/;"	l
+fill3	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    fill3: times 62 db 0$/;"	l
+fill3	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    fill3: times 62 db 0$/;"	l
+filler	examples/rsb/rsb_fill_deep_stack.asm	/^filler:$/;"	l
+filler2	examples/rsb/rsb_fill_deep_stack.asm	/^filler2:$/;"	l
+free	include/speculator.h	/^    int free;$/;"	m	struct:speculator_monitor_data
+func	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^func:$/;"	l
+func	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^func:$/;"	l
+func	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^func:$/;"	l
+func2	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^func2:$/;"	l
+func2	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^func2:$/;"	l
+func2	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^func2:$/;"	l
+get_index	scripts/cr_inc_snip.py	/^def get_index(template):$/;"	f
+handler	examples/mpx/mpx.asm	/^handler:$/;"	l
+handler	examples/nx/nx.asm	/^handler:$/;"	l
+hflag	include/speculator.h	/^static int hflag = 0;     \/\/ FLAG help option$/;"	v
+iflag	include/speculator.h	/^static int iflag = 0;     \/\/ FLAG invert start of attack\/victim$/;"	v
+init_result_file	src/speculator_monitor.c	/^init_result_file(char *output_filename, int is_attacker) {$/;"	f
+intel_fixed_counters	include/intel.h	/^const char *intel_fixed_counters[] = {"INSTRUCTIONS_RETIRED", "CYCLES", "UNKNOWN"};$/;"	v
+junk	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    junk: db 1$/;"	d
+junk	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    junk: db 1$/;"	d
+junk	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    junk: db 1$/;"	d
+junk	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    junk: db 1$/;"	d
+junk	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    junk: db 1$/;"	d
+junk	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    junk: db 1$/;"	d
+key	include/speculator.h	/^    char* key[N_COUNTERS];$/;"	m	struct:speculator_monitor_data
+lea_array	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    lea_array: times 40 db 0$/;"	l
+lea_array	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    lea_array: times 40 db 0$/;"	l
+len	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    len: equ $-val$/;"	d
+len	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    len: equ $-val$/;"	d
+len	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    len: equ $-val$/;"	d
+len	examples/mpx/mpx.asm	/^    len: equ $-val$/;"	d
+len	examples/nx/nx.asm	/^    len: equ $-val$/;"	d
+len	examples/rsb/rsb_fill_deep_stack.asm	/^    len: equ $-val$/;"	d
+len	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    len: equ $-val$/;"	d
+len	examples/speculation_stopper/speculation_stopper.asm	/^    len: equ $-val$/;"	d
+len	examples/syscall_speculation/syscall_speculation.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    len: equ $-val$/;"	d
+len	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    len: equ $-val$/;"	d
+len	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    len: equ $-val$/;"	d
+len	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    len: equ $-val$/;"	d
+len	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    len: equ $-val$/;"	d
+len	examples/v4_cycles/v4_cycles.asm	/^    len: equ $-val$/;"	d
+len	templates/x86/template.asm	/^    len: equ $-val$/;"	d
+len	templates/x86/template_branch.asm	/^    len: equ $-val$/;"	d
+len	tests/mytest.asm	/^    len: equ $-val$/;"	d
+long_options	include/speculator.h	/^static struct option long_options[] = {$/;"	v	typeref:struct:option
+main	scripts/cr_inc_snip.py	/^def main():$/;"	f
+main	scripts/post-processing-exec.py	/^def main():$/;"	f
+main	scripts/post-processing.py	/^def main():$/;"	f
+main	scripts/run_test.py	/^def main():$/;"	f
+main	src/speculator_monitor.c	/^main(int argc, char **argv) {$/;"	f
+mask	include/speculator.h	/^    char* mask[N_COUNTERS];$/;"	m	struct:speculator_monitor_data
+msg_bounds	examples/mpx/mpx.asm	/^    msg_bounds: db "mpx bounds", 0xA, 0$/;"	d
+myexit	examples/rsb/rsb_fill_deep_stack.asm	/^myexit:$/;"	l
+offset	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    offset: dq 0$/;"	d
+offset	examples/speculation_stopper/speculation_stopper.asm	/^    offset: dq 0$/;"	d
+offset	examples/syscall_speculation/syscall_speculation.asm	/^    offset: dq 0$/;"	d
+offset	examples/v4_cycles/v4_cycles.asm	/^    offset: dq 0$/;"	d
+offset	templates/x86/template.asm	/^    offset: dq 0$/;"	d
+offset	templates/x86/template_branch.asm	/^    offset: dq 0$/;"	d
+offset	tests/mytest.asm	/^    offset: dq 0$/;"	d
+oflag	include/speculator.h	/^static int oflag = 0;     \/\/ FLAG output file option$/;"	v
+parse_config	include/speculator.h	/^parse_config (char *config_filename) {$/;"	f
+perf_test_entry	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/mpx/mpx.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/nx/nx.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/rsb/rsb_fill_deep_stack.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/speculation_stopper/speculation_stopper.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/syscall_speculation/syscall_speculation.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_register.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	examples/v4_cycles/v4_cycles.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	templates/x86/template.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	templates/x86/template_branch.asm	/^perf_test_entry:$/;"	l
+perf_test_entry	tests/mytest.asm	/^perf_test_entry:$/;"	l
+prev_head	include/speculator.h	/^    long long prev_head;$/;"	m	struct:speculator_monitor_data
+qflag	include/speculator.h	/^static int qflag = 0;     \/\/ FLAG quite mode$/;"	v
+read_AMD_PMCi	include/amd.h	/^uint64_t read_AMD_PMCi(int fd, uint8_t i) {$/;"	f
+read_IA32_FIXED_CTRi	include/intel.h	/^read_IA32_FIXED_CTRi(int fd,$/;"	f
+read_IA32_PMCi	include/intel.h	/^read_IA32_PMCi(int fd,$/;"	f
+read_perf_event_counter	include/speculator.h	/^uint64_t (*read_perf_event_counter)(int fd, uint8_t i);$/;"	v
+recursive_mkdir	include/speculator.h	/^recursive_mkdir(char *path) {$/;"	f
+restorer	examples/mpx/mpx.asm	/^restorer:$/;"	l
+restorer	examples/nx/nx.asm	/^restorer:$/;"	l
+result	scripts/post-processing-exec.py	/^result = []$/;"	v
+results	scripts/post-processing.py	/^results = []$/;"	v
+results_misspr	scripts/post-processing-exec.py	/^results_misspr = []$/;"	v
+results_pr	scripts/post-processing-exec.py	/^results_pr = []$/;"	v
+rflag	include/speculator.h	/^static int rflag = 0;     \/\/ FLAG repeat option$/;"	v
+secret	examples/rsb/rsb_fill_deep_stack.asm	/^    secret: db 0$/;"	d
+sem_attacker	include/speculator.h	/^static sem_t *sem_attacker = NULL;$/;"	v
+sem_victim	include/speculator.h	/^static sem_t *sem_victim = NULL;$/;"	v
+set_counters	src/speculator_monitor.c	/^set_counters(int msr_fd, int is_attacker) {$/;"	f
+sflag	include/speculator.h	/^static int sflag = 0;     \/\/ FLAG serial execution of attack\/victim$/;"	v
+single_line	scripts/post-processing.py	/^single_line = dict()$/;"	v
+snippet	examples/nx/nx.asm	/^snippet:$/;"	l
+speculator_monitor_data	include/speculator.h	/^struct speculator_monitor_data {$/;"	s
+start_monitor_inline	src/speculator_monitor.c	/^start_monitor_inline(int victim_pid,$/;"	f
+start_process	src/speculator_monitor.c	/^start_process(char *filename, int core, sem_t *sem, char** env) {$/;"	f
+tab	scripts/post-processing.py	/^tab = []$/;"	v
+target	examples/nx/nx.asm	/^    target: dq 0$/;"	d
+trap_msg	examples/nx/nx.asm	/^    trap_msg: db "trap", 0xA, 0$/;"	d
+update_code	scripts/cr_inc_snip.py	/^def update_code(args, template, idx_data, idx_code, snippet_json):$/;"	f
+update_data	scripts/cr_inc_snip.py	/^def update_data(template, idx_data, idx_code, snippet_json):$/;"	f
+usage_and_quit	src/speculator_monitor.c	/^usage_and_quit(char** argv) {$/;"	f
+val	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    val: dq 0$/;"	d
+val	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    val: dq 0$/;"	d
+val	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    val: dq 0$/;"	d
+val	examples/mpx/mpx.asm	/^    val: dq 0$/;"	d
+val	examples/nx/nx.asm	/^    val: dq 0$/;"	d
+val	examples/rsb/rsb_fill_deep_stack.asm	/^    val: dq 0$/;"	d
+val	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    val: dq 0$/;"	d
+val	examples/speculation_stopper/speculation_stopper.asm	/^    val: dq 0$/;"	d
+val	examples/syscall_speculation/syscall_speculation.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    val: dq 0$/;"	d
+val	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    val: dq 0$/;"	d
+val	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    val: dq 0$/;"	d
+val	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    val: dq 0$/;"	d
+val	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    val: dq 0$/;"	d
+val	examples/v4_cycles/v4_cycles.asm	/^    val: dq 0$/;"	d
+val	templates/x86/template.asm	/^    val: dq 0$/;"	d
+val	templates/x86/template_branch.asm	/^    val: dq 0$/;"	d
+val	tests/mytest.asm	/^    val: dq 0$/;"	d
+venvflag	include/speculator.h	/^static int venvflag = 0;  \/\/ FLAG venv option$/;"	v
+vflag	include/speculator.h	/^static int vflag = 0;     \/\/ FLAG victim path$/;"	v
+victim	examples/rsb/rsb_fill_deep_stack.asm	/^victim:$/;"	l
+victim_data	include/speculator.h	/^victim_data = {{NULL}, {NULL}, {NULL}, {NULL},$/;"	v	typeref:struct:speculator_monitor_data
+victim_preload	include/speculator.h	/^static char *victim_preload[100] = {NULL};$/;"	v
+warmup_cnt	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    warmup_cnt: dd 1$/;"	d
+warmup_cnt	examples/mpx/mpx.asm	/^    warmup_cnt: dq 1$/;"	d
+warmup_cnt	examples/nx/nx.asm	/^    warmup_cnt: dq 1$/;"	d
+warmup_cnt	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    warmup_cnt: db 1 ; first cache line$/;"	d
+warmup_cnt	examples/speculation_stopper/speculation_stopper.asm	/^    warmup_cnt: dd 1$/;"	d
+warmup_cnt	examples/syscall_speculation/syscall_speculation.asm	/^    warmup_cnt: dd 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	examples/v4_cycles/v4_cycles.asm	/^    warmup_cnt: db 1$/;"	d
+warmup_cnt	templates/x86/template.asm	/^    warmup_cnt: dd 11$/;"	d
+warmup_cnt	templates/x86/template_branch.asm	/^    warmup_cnt: dd 1$/;"	d
+warmup_cnt	tests/mytest.asm	/^    warmup_cnt: dd 11$/;"	d
+warmup_cnt_fake	examples/clflush_in_speculation/clflush_in_speculation_cached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/clflush_in_speculation/clflush_in_speculation_uncached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/corr_issued_and_exec/corr_issued_and_exec_slow_lea.asm	/^    warmup_cnt_fake: dd 1$/;"	d
+warmup_cnt_fake	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    warmup_cnt_fake: dw 2 ; second cache line$/;"	d
+warmup_cnt_fake	examples/speculation_stopper/speculation_stopper.asm	/^    warmup_cnt_fake: dd 1$/;"	d
+warmup_cnt_fake	examples/syscall_speculation/syscall_speculation.asm	/^    warmup_cnt_fake: dd 1$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_cached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_complex_cached_div.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_complex_cached_mul.asm	/^    warmup_cnt_fake: dw 4096$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_complex_register_div.asm	/^    warmup_cnt_fake: dq 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_complex_register_mul.asm	/^    warmup_cnt_fake: dw 4096$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_complex_uncached_div.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_complex_uncached_mul.asm	/^    warmup_cnt_fake: dw 4096$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_register.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_cond_uncached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_cached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_complex_cached_div.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_complex_cached_mul.asm	/^    warmup_cnt_fake: dw 4096$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_complex_register_div.asm	/^    warmup_cnt_fake: dq 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_complex_register_mul.asm	/^    warmup_cnt_fake: dw 4096$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_div.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_complex_uncached_mul.asm	/^    warmup_cnt_fake: dw 4096$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_register.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v1_various_cond_cycles/v1_nocond_uncached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v2_various_uncond_cycles/v2_uncond_cached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v2_various_uncond_cycles/v2_uncond_register.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v2_various_uncond_cycles/v2_uncond_uncached.asm	/^    warmup_cnt_fake: dw 2$/;"	d
+warmup_cnt_fake	examples/v4_cycles/v4_cycles.asm	/^    warmup_cnt_fake: dq 1 $/;"	d
+warmup_cnt_fake	templates/x86/template_branch.asm	/^    warmup_cnt_fake: dd 1$/;"	d
+warmup_cnt_fake2	examples/speculation_in_speculation/speculation_in_speculation_in_speculation.asm	/^    warmup_cnt_fake2: db 1 ; third cache line$/;"	d
+write_perf_event_counter	include/speculator.h	/^void (*write_perf_event_counter)(int fd, uint8_t i, uint64_t val);$/;"	v
+write_perf_event_select	include/speculator.h	/^void (*write_perf_event_select)(int fd, uint8_t i, uint64_t val);$/;"	v
+write_to_AMD_PERFEVTSELi	include/amd.h	/^void write_to_AMD_PERFEVTSELi(int fd, uint8_t i, uint64_t val) {$/;"	f
+write_to_AMD_PMCi	include/amd.h	/^void write_to_AMD_PMCi(int fd, uint8_t i, uint64_t val) {$/;"	f
+write_to_IA32_FIXED_CTR_CTRL	include/intel.h	/^write_to_IA32_FIXED_CTR_CTRL(int fd,$/;"	f
+write_to_IA32_FIXED_CTRi	include/intel.h	/^write_to_IA32_FIXED_CTRi(int fd,$/;"	f
+write_to_IA32_PERFEVTSELi	include/intel.h	/^write_to_IA32_PERFEVTSELi(int fd,$/;"	f
+write_to_IA32_PERF_GLOBAL_CTRL	include/intel.h	/^write_to_IA32_PERF_GLOBAL_CTRL(int fd,$/;"	f
+write_to_IA32_PMCi	include/intel.h	/^write_to_IA32_PMCi(int fd,$/;"	f
+xstate	examples/mpx/mpx.asm	/^    xstate: times 0x1000 db 0$/;"	l
+xstate	examples/nx/nx.asm	/^    xstate: times 0x1000 db 0$/;"	l

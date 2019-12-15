@@ -35,31 +35,39 @@
 
 #include "speculator.h"
 
+//printf help information
 void
 usage_and_quit(char** argv) {
     fprintf(stderr, USAGE_FORMAT, basename(argv[0]));
     exit(EXIT_FAILURE);
 }
 
+// init output file, write titles to it
 void
 init_result_file(char *output_filename, int is_attacker) {
     FILE *o_fd = NULL;
     struct speculator_monitor_data *data;
 
     data = &victim_data;
-
+	//if current testing program is attacker
     if (is_attacker) {
         data = &attacker_data;
     }
-
+	// open output file to write titles
     o_fd = fopen(output_filename, "w");
 
 #ifdef INTEL
+	// intel's special performance counter
+	// INSTRUCTIONS_RETIRED|CYCLES|UNKNOWN
     for (int i = 0; i < 3; ++i)
         fprintf(o_fd, "%s|", intel_fixed_counters[i]);
 #endif // INTEL
 
-    for (int i = 0; i < data->free; ++i)
+	// other counter name
+	// LD_BLOCKS.STORE_FORWARD|UOPS_EXECUTED.CORE
+	// BR_MISP_RETIRED.ALL_BRANCHES|UOPS_ISSUED.SINGLE_MUL
+    printf("data-free:%d\n",data->free);
+	for (int i = 0; i < data->free; ++i)
         fprintf (o_fd, "%s.%s|", data->key[i], data->mask[i]);
 
     fprintf(o_fd,"\n");
@@ -403,10 +411,12 @@ main(int argc, char **argv) {
     sem_init(sem_attacker, 1, 1);
 
     //Function to parse config file 
+	//according to the json file, to fill the victim_data and attack_data
+	//include couter description and other information
 	parse_config(config_filename);
-
+	//create output directory
     recursive_mkdir(output_filename);
-
+	//add the first row in output file for descripting the couter
     init_result_file(output_filename, 0);
 
     if (aflag) {//--attacker
