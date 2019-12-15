@@ -19,6 +19,8 @@
 
 const char *intel_fixed_counters[] = {"INSTRUCTIONS_RETIRED", "CYCLES", "UNKNOWN"};
 
+//open some intel hardware counter for writing or reading
+// file name: /dev/cpu/%ld/msr
 void
 write_to_IA32_PERF_GLOBAL_CTRL(int fd,
                                uint64_t val) {

@@ -74,6 +74,7 @@ init_result_file(char *output_filename, int is_attacker) {
     fclose(o_fd);
 }
 
+// change this process to attacker/victim process
 void
 start_process(char *filename, int core, sem_t *sem, char** env) {
     int ret = -1;
@@ -100,7 +101,9 @@ start_process(char *filename, int core, sem_t *sem, char** env) {
         fprintf (stderr, "Impossible set scheduler RR proprity\n");
         exit(EXIT_FAILURE);
     }
-
+	
+	//this is need to wait sem>0
+	//the first, the sem is = 0
     sem_wait(sem);
     sem_post(sem);
 
@@ -140,16 +143,20 @@ set_counters(int msr_fd, int is_attacker) {
         write_perf_event_counter(msr_fd, i, 0ull);
 }
 
+
+//write the counter value during running to output file
 void dump_results(char *output_filename, int msr_fd, int is_attacker) {
     FILE *fp = NULL;
     struct speculator_monitor_data *data;
-
+	//victim or attacker is for writing
     data = &victim_data;
 
     if (is_attacker) {
         data = &attacker_data;
     }
-
+	
+	// open the output file to write
+	// a+, because titles have already been writed 
     fp = fopen (output_filename, "a+");
 
         if (fp == NULL) {
@@ -158,12 +165,17 @@ void dump_results(char *output_filename, int msr_fd, int is_attacker) {
         }
 
 #ifdef INTEL
+		// three special counter for intel
+		// msr_fd: file description
+		// msr_fd_victim = open(msr_path_victim, O_RDWR | O_CLOEXEC);, MSR file
+		// i: offset of different counters 
         for (int i = 0; i < 3; ++i) {
             data->count_fixed[i] = read_IA32_FIXED_CTRi(msr_fd, i);
             fprintf(fp, "%lld|", data->count_fixed[i]);
         }
 #endif // INTEL
-
+		// other counters values in speculator_monitor_data structures 
+		// data->count is writed in function set_counter()
         for (int i = 0; i < data->free; ++i) {
             data->count[i] = read_perf_event_counter(msr_fd, i);
             if (!qflag) {
@@ -182,6 +194,8 @@ void dump_results(char *output_filename, int msr_fd, int is_attacker) {
         fclose(fp);
 }
 
+
+// 
 void
 start_monitor_inline(int victim_pid,
                      int attacker_pid,
@@ -190,30 +204,42 @@ start_monitor_inline(int victim_pid,
                      int msr_fd_victim,
                      int msr_fd_attacker) {
     int status = 0;
-
+	
+	// set the counter to 0/other values. 
+	// 0:victim, 1:attacker
     set_counters(msr_fd_victim, 0);
     if (aflag && ATTACKER_CORE != VICTIM_CORE)
         set_counters(msr_fd_attacker, 1);
 
+	// aflag: attacker is set
+	// iflag: invert the thread order of victim and attack
+	// attacker execute before victim
     if (aflag && !iflag) {
+		// let sem_attacker ++
+		// after this, the attacker process can be executed
         sem_post(sem_attacker);
+		//dflag: delay some time between attacker and victim
         if (dflag) {
             usleep (delay);
         }
+		// serialize the execution of attacker and victim
         if (sflag) {
+			// wait attacker executions	
             waitpid(attacker_pid, &status, 0);
         }
     }
-
+	// add sem_victim +1
+	// after this, the victim process can be executed
+	// and now, counter is already been set
     sem_post(sem_victim);
-
+	// serialize execution
     if (sflag) {
 		//如果在调用waitpid()函数时，当指定等待的子进程已经停止运行或结束了
 		//则waitpid()会立即返回
 		//但是如果子进程还没有停止运行或结束，则调用waitpid()函数的父进程则会被阻塞，暂停运行
         waitpid(victim_pid, &status, 0);
     }
-
+	// attack is executed after victim
     if (aflag && iflag) {
         if(dflag) {
             usleep(delay);
@@ -226,10 +252,11 @@ start_monitor_inline(int victim_pid,
 
     // Waiting for victim to return
     // and dump the counters on the cores
+	// the parents always wait the victim process execution over 
     if (!sflag) {
         waitpid(victim_pid, &status, 0);
     }
-
+	//write counters value to output file
     dump_results(output_filename, msr_fd_victim, 0);
 
     if (aflag) {
@@ -262,6 +289,7 @@ main(int argc, char **argv) {
 
 #ifdef INTEL
     debug_print("CPU: Intel detected\n");
+	//set the function pointers
     write_perf_event_select = write_to_IA32_PERFEVTSELi;
     write_perf_event_counter = write_to_IA32_PMCi;
     read_perf_event_counter = read_IA32_PMCi;
@@ -488,9 +516,14 @@ main(int argc, char **argv) {
             }
         }
 #endif // DUMMY
-
+		
+		// let sem_victim-- if it is biger than zero
+		// otherwise, this instruction will wait until it is larger than zero
+		//	(other process add sem_victim)
+		// sem_victim is initial with 1
         sem_wait(sem_victim);
-
+		
+		//attacker is exist
         if (aflag)
             sem_wait(sem_attacker);
 
